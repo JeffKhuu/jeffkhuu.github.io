@@ -1,0 +1,82 @@
+section {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    gap: 4px;
+    grid-auto-flow: row;
+}
+
+div#page {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+section.centered {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh;
+    align-items: center;
+    justify-items: center;
+}
+
+section#list {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+section#list h2 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a#icon {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    min-height: 50px;
+}
+
+footer {
+    min-height: 50px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32rem;
+}
+
+.inline-img {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+h1 {
+    font-family: 'Playpen Sans', serif;
+    font-weight: 600;
+    text-align: left;
+}
+
+h2 {
+    font-family: 'Fira Code', serif;
+    font-weight: 800;
+}
+
+p {
+    font-family: 'Fira Code', serif;
+    text-align: left;
+}
+
+i {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}

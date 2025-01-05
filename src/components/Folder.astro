@@ -1,0 +1,15 @@
+---
+const { title, link } = Astro.props;
+---
+
+<div>
+    <section id="list">
+        <h2>
+            {title}
+            <a id="icon" style="font-size: 1rem;" href={link}>
+                <i class="fa-solid fa-link"></i>
+            </a>
+        </h2>
+        <p>A little empty at the moment...</p>
+    </section>
+</div>

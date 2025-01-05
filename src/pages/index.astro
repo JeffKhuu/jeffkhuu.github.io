@@ -1,9 +1,20 @@
 ---
 import Welcome from "../components/Welcome.astro";
+import Header from "../components/Header.astro";
+import Folder from "../components/Folder.astro";
 import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<!-- Main Homepage -->
+<!-- TODO: 404 NOT FOUND PAGE --><!-- Main Homepage -->
 <Layout>
-	<Welcome />
+	<div id="page">
+		<Header />
+		<div id="content">
+			<Welcome />
+			<Folder title="PLAY-ABLES" link="https://github.com/jeffkhuu" />
+			<Folder title="READ-ABLES" link="/blog" />
+		</div>
+		<Footer />
+	</div>
 </Layout>
