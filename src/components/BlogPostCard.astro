@@ -1,0 +1,18 @@
+---
+const { id, title, description, date } = Astro.props;
+
+const dateOptions: object = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+};
+---
+
+<a class="hover-highlight no-underline" href=`/blog/${id}`>
+    <div class="border-2 rounded-md p-2 h-24">
+        <span class="line-clamp-2">
+            <b>{title}</b> - <i>{description}</i>
+        </span>
+        <p>{date.toLocaleDateString("en-US", dateOptions)}</p>
+    </div>
+</a>

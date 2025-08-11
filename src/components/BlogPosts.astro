@@ -1,0 +1,26 @@
+---
+import { getCollection } from "astro:content";
+import IconLink from "./IconLink.astro";
+import Section from "./Section.astro";
+import BlogPostCard from "./BlogPostCard.astro";
+
+const blogPosts = (await getCollection("blogPosts")).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+); // Retrieve blog posts and sort by newest first
+---
+
+<Section>
+    <h2>READ-ABLES <IconLink href="/blog" /></h2>
+    <div class="grid grid-cols-1 gap-2">
+        {
+            blogPosts.slice(0, 5).map((post) => (
+                <BlogPostCard
+                    id={post.id}
+                    title={post.data.title}
+                    description={post.data.description}
+                    date={post.data.pubDate}
+                />
+            ))
+        }
+    </div>
+</Section>

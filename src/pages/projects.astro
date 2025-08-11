@@ -1,0 +1,26 @@
+---
+import Page from "../layouts/Page.astro";
+import Card from "../components/Card.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+
+const projects = (await getCollection(
+    "projects",
+)) as CollectionEntry<"projects">[];
+---
+
+<Page widenPage={true}>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+        {
+            projects
+                .reverse()
+                .map((project) => (
+                    <Card
+                        title={project.data.name}
+                        description={project.data.description}
+                        link={project.data.link}
+                        thumbnail={project.data.thumbnail}
+                    />
+                ))
+        }
+    </div>
+</Page>

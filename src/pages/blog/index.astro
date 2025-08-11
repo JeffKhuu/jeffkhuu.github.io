@@ -1,0 +1,26 @@
+---
+import { getCollection } from "astro:content";
+import Page from "../../layouts/Page.astro";
+import Welcome from "../../components/Welcome.astro";
+import BlogPosts from "../../components/BlogPosts.astro";
+import BlogPostCard from "../../components/BlogPostCard.astro";
+
+const blogPosts = (await getCollection("blogPosts")).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+); // Retrieve blog posts and sort by newest first
+---
+
+<Page>
+    <div class="grid grid-cols-1 gap-2">
+        {
+            blogPosts.map((post) => (
+                <BlogPostCard
+                    id={post.id}
+                    title={post.data.title}
+                    description={post.data.description}
+                    date={post.data.pubDate}
+                />
+            ))
+        }
+    </div>
+</Page>

@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+
+
+@theme {
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-script: 'Playpen Sans', cursive;
+  --color-highlight: #c5c5c5;
+}
+
+@layer base {
+  * {
+    @apply font-mono
+  }
+
+  body {
+    @apply flex flex-col min-h-screen mx-auto
+  }
+
+  main {
+      @apply mx-auto flex-grow w-md md:w-2xl
+  }
+
+  a {
+    @apply underline
+  }
+
+  a:hover {
+    @apply text-highlight
+  }
+}
+
+.hover-highlight:hover {
+  @apply text-highlight -translate-y-1;
+}
+
+.hover-highlight {
+  @apply transition-transform duration-300 ease-in-out
+}
+
+h1 {
+  @apply font-script scroll-m-20 font-semibold text-3xl px-4 py-4
+}
+
+h2 {
+  @apply font-mono scroll-m-20 text-2xl font-extrabold px-4 py-4 flex items-center gap-2
+}
+
+h3 {
+  @apply font-mono scroll-m-20 text-xl font-semibold px-4 pt-4 pb-2
+}
+
+p {
+  @apply font-mono px-4 py-2
+}
+
+pre {
+  @apply p-4 rounded-md
+}

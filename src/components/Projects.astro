@@ -1,0 +1,26 @@
+---
+import Card from "./Card.astro";
+import IconLink from "./IconLink.astro";
+import Section from "./Section.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+
+const projects = (await getCollection(
+    "projects",
+)) as CollectionEntry<"projects">[];
+---
+
+<Section>
+    <h2>PROJECT-ABLES <IconLink href="/projects" /></h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+        {
+            projects.reverse().slice(0, 5).map((project) => (
+                <Card
+                    title={project.data.name}
+                    description={project.data.description}
+                    link={project.data.link}
+                    thumbnail={project.data.thumbnail}
+                />
+            ))
+        }
+    </div>
+</Section>
