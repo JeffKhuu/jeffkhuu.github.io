@@ -33,7 +33,7 @@ const { showHeaderFooter = true, widenPage = false } = Astro.props;
         {showHeaderFooter && <Header />}
         {
             widenPage ? (
-                <main class="md:w-5xl">
+                <main class="w-md lg:w-5xl">
                     <slot />
                 </main>
             ) : (

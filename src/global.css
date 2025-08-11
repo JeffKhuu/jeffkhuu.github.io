@@ -18,7 +18,7 @@
   }
 
   main {
-      @apply mx-auto flex-grow w-md md:w-2xl
+      @apply mx-auto flex-grow w-sm sm:w-md md:w-2xl
   }
 
   a {
