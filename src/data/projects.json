@@ -4,20 +4,20 @@
         "name": "FTC Statistics Dashboard",
         "description": "Full stack app using React and Flask",
         "link": "https://github.com/team24124/stats",
-        "thumbnail": "/src/assets/thumbnails/stats-dashboard-thumbnail.png"
+        "thumbnail": "thumbnails/stats-dashboard-thumbnail.png"
     },
     {
         "id": 1,
         "name": "NEST",
         "description": "Nighthawks Event Statistics Tool made in tkinter",
         "link": "https://github.com/team24124/nest",
-        "thumbnail": "src/assets/thumbnails/nest-thumbnail.png"
+        "thumbnail": "thumbnails/nest-thumbnail.png"
     },
     {
         "id": 2,
         "name": "FTC Robotics (Into the Deep)",
         "description": "Java codebase using FTC SDK",
         "link": "https://github.com/team24124/nths-ftc-2025-24124",
-        "thumbnail": "src/assets/thumbnails/ftc-thumbnail.png"
+        "thumbnail": "thumbnails/ftc-thumbnail.png"
     }
 ]
