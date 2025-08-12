@@ -4,7 +4,7 @@
         "name": "FTC Statistics Dashboard",
         "description": "Full stack app using React and Flask",
         "link": "https://github.com/team24124/stats",
-        "thumbnail": "src/assets/thumbnails/stats-dashboard-thumbnail.png"
+        "thumbnail": "/src/assets/thumbnails/stats-dashboard-thumbnail.png"
     },
     {
         "id": 1,
