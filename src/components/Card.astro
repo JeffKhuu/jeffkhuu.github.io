@@ -6,7 +6,7 @@ const { title, description, link, thumbnail } = Astro.props;
     <div class="border-2 rounded-md aspect-video">
         <div class="overflow-hidden border-b-2 w-full h-2/3">
             <img
-                src={thumbnail}
+                src={"/" + thumbnail}
                 class="object-cover transition-transform ease-in-out duration-300 scale-100 group-hover:scale-125"
             />
         </div>
